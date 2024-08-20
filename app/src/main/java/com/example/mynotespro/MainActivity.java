@@ -14,6 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        FirebaseApp.initializeApp(this);
         lottieAnimationView= (LottieAnimationView) findViewById(R.id.animation);
         DatabaseReference reference= FirebaseDatabase.getInstance().getReference().child("animation");
         reference.addValueEventListener(new ValueEventListener() {

@@ -40,8 +40,12 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.firebase.database)
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("com.airbnb.android:lottie:5.2.0")
+    implementation ("com.google.firebase:firebase-firestore:24.0.0")
+
+
 }

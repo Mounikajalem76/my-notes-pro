@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,16 +34,17 @@ public class SignUppage extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference reference;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_sign_uppage);
         editText_name=(EditText) findViewById(R.id.signup_name);
         editText_email=(EditText) findViewById(R.id.signup_email);
         editText_mobile=(EditText) findViewById(R.id.signup_mobile);
         editText_password=(EditText) findViewById(R.id.signup_password);
+        progressBar= (ProgressBar) findViewById(R.id.progressbar);
 
         button_signup=(Button) findViewById(R.id.signup_button);
 
@@ -67,12 +69,14 @@ public class SignUppage extends AppCompatActivity {
                     editText_mobile.setError("Please enter mobile number");
 
                 } else if (password.isEmpty()) {
-                    editText_password.setError("please enter technology");
+                    editText_password.setError("please enter password");
 
                 }else {
                     firebaseAuth.createUserWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+
                         @Override
                         public void onSuccess(AuthResult authResult) {
+                            changeInProgress(true);
                             HelperClass helperClass = new HelperClass (name, email,mobile,password);
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
                             DatabaseReference databaseReference = database.getReference("users").child("user data");
@@ -80,6 +84,14 @@ public class SignUppage extends AppCompatActivity {
                             Toast.makeText(SignUppage.this, "SignUp Sucessfully", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(SignUppage.this, signinpage.class);
                             startActivity(intent);
+
+                        }
+                        void changeInProgress(boolean inProgress){
+                            if (inProgress){
+                                progressBar.setVisibility(View.VISIBLE);
+                            }else {
+                                progressBar.setVisibility(View.GONE);
+                            }
 
                         }
                     }).addOnFailureListener(new OnFailureListener() {
@@ -90,6 +102,7 @@ public class SignUppage extends AppCompatActivity {
                         }
                     });
             }
+
         }
     });
         textView_signin.setOnClickListener(new View.OnClickListener() {

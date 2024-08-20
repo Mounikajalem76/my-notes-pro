@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="220dp"
         android:orientation="vertical">
 
@@ -85,6 +85,12 @@
             android:text="SignIn"
             android:textSize="20dp"
             android:textStyle="bold" />
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:id="@+id/progressbar"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/forgetPassword"
