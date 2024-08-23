@@ -12,12 +12,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="70dp"
         android:fontFamily="cursive"
-        android:text="SignUp"
+        android:text="@string/signup"
         android:textColor="@color/white"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -41,10 +41,10 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:backgroundTint="#245E8C"
-                android:drawableLeft="@drawable/baseline_person_24"
+                android:drawableStart="@drawable/baseline_person_24"
                 android:drawablePadding="10dp"
                 android:fontFamily="cursive"
-                android:hint="Name"
+                android:hint="@string/name"
                 android:textColorHint="#4F5CA2"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -63,11 +63,12 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:backgroundTint="#245E8C"
-                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawableStart="@drawable/baseline_email_24"
                 android:drawablePadding="10dp"
                 android:fontFamily="cursive"
                 android:hint="Email"
                 android:textColorHint="#4F5CA2"
+                android:inputType="textEmailAddress"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,6 +86,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:backgroundTint="#245E8C"
+                android:inputType="number"
                 android:drawableLeft="@drawable/baseline_local_phone_24"
                 android:drawablePadding="10dp"
                 android:fontFamily="cursive"
@@ -96,25 +98,23 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            app:boxCornerRadiusBottomEnd="30dp"
             app:boxCornerRadiusTopStart="30dp"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="#208997">
-
+            app:passwordToggleTint="#245E8C"
+            app:boxCornerRadiusBottomEnd="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
             <EditText
-                android:id="@+id/signup_password"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:backgroundTint="#245E8C"
-                android:drawableLeft="@drawable/baseline_lock_24"
-                android:drawablePadding="10dp"
-                android:fontFamily="cursive"
                 android:hint="Password"
-                android:textColorHint="#4F5CA2"
-                android:textStyle="bold" />
+                android:focusableInTouchMode="true"
+                android:drawableStart="@drawable/baseline_lock_24"
+                android:id="@+id/password"
+                android:fontFamily="cursive"
+                android:drawablePadding="10dp"
+                android:textStyle="bold"
+               />
         </com.google.android.material.textfield.TextInputLayout>
 
 

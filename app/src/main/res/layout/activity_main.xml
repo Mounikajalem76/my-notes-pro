@@ -13,15 +13,16 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="150dp"
-        android:text="My Notes Pro"
+        android:text="@string/my_notes_pro"
         android:textColor="#208997"
-        android:textSize="50dp"
+        android:textSize="50sp"
        android:fontFamily="cursive"
         android:textStyle="bold"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:contentDescription="@string/todow"
         android:src="@drawable/logo"
         android:layout_marginTop="30dp"/>
     <com.airbnb.lottie.LottieAnimationView

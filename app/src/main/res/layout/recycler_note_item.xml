@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:padding="12dp"
+    android:layout_marginVertical="8dp"
+    android:backgroundTint="@color/white"
+    android:background="@drawable/rounded_corner"
     android:layout_height="wrap_content">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="note title"
+        android:text="@string/note_title"
         android:textSize="18sp"
+        android:id="@+id/recycler_noteTitle"
         android:layout_marginVertical="4dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="this can be note content that can be long"
+        android:text="@string/this_can_be_note_content_that_can_be_long"
         android:textSize="17sp"
         android:maxLines="2"
         android:ellipsize="end"
+        android:id="@+id/notes_content_text"
         android:layout_marginVertical="4dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="note title"
-        android:textSize="18sp"
+        android:text="@string/timestamp"
+        android:textSize="10sp"
         android:gravity="right"
-        android:layout_marginVertical="4dp"/>
-
-
+        android:id="@+id/recycler_noteTimestamp"
+        android:layout_marginVertical="4dp"
+        tools:ignore="RtlHardcoded,SmallSp" />
 
 </LinearLayout>

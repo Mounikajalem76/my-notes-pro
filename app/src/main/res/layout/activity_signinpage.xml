@@ -53,26 +53,25 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             app:boxCornerRadiusBottomEnd="30dp"
             app:boxCornerRadiusTopStart="30dp"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="#208997 ">
+            app:passwordToggleTint="#245E8C">
 
             <EditText
-                android:id="@+id/signin_password"
+                android:id="@+id/password"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:backgroundTint="#245E8C"
-                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawableStart="@drawable/baseline_lock_24"
                 android:drawablePadding="10dp"
+                android:focusableInTouchMode="true"
                 android:fontFamily="cursive"
-                android:hint="Password"
-                android:textColorHint="#4F5CA2"
+                android:hint="@string/password"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/signup_button"
@@ -82,15 +81,16 @@
             android:layout_marginTop="20dp"
             android:backgroundTint="#208897"
             android:fontFamily="cursive"
-            android:text="SignIn"
+            android:text="@string/signin"
             android:textSize="20dp"
             android:textStyle="bold" />
+
         <ProgressBar
+            android:id="@+id/progressbar"
             android:layout_width="30dp"
             android:layout_height="64dp"
             android:layout_gravity="center"
-            android:id="@+id/progressbar"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/forgetPassword"

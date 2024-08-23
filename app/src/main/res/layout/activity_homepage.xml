@@ -16,14 +16,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/page_title"
-            android:text="Notes"
+            android:text="@string/notes"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="32sp"/>
+            android:textSize="32sp"
+            tools:ignore="RelativeOverlap" />
 
         <ImageButton
             android:layout_width="36dp"
             android:layout_height="36dp"
+            android:contentDescription="@string/todo"
             android:src="@drawable/baseline_menu_24"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
@@ -45,6 +47,7 @@
         android:backgroundTint="@color/white"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:contentDescription="@string/todoo"
         android:src="@drawable/baseline_add_24"
         android:id="@+id/add_note_btn"/>
 

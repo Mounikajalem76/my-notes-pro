@@ -1,5 +1,6 @@
 package com.example.mynotespro;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -31,14 +33,16 @@ public class signinpage extends AppCompatActivity {
     TextView textView_forget;
     FirebaseAuth firebaseAuth;
     ProgressBar progressBar;
+    AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signinpage);
         editText_email = (EditText) findViewById(R.id.signin_email);
-        editText_password = (EditText) findViewById(R.id.signin_password);
+        editText_password = (EditText) findViewById(R.id.password);
         progressBar= (ProgressBar) findViewById(R.id.progressbar);
+        builder=new AlertDialog.Builder(this);
 
         button_signin = (Button) findViewById(R.id.signup_button);
 
@@ -127,5 +131,25 @@ public class signinpage extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        builder.setTitle("Alert")
+                .setMessage("do you want to close this app")
+                .setCancelable(true)
+                .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                })
+                .show();
     }
 }

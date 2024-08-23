@@ -41,11 +41,13 @@ dependencies {
     implementation(libs.firebase.database)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
+    implementation(libs.foundation.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("com.airbnb.android:lottie:5.2.0")
     implementation ("com.google.firebase:firebase-firestore:24.0.0")
+    implementation ("com.firebaseui:firebase-ui-firestore:8.0.2")
 
 
 }

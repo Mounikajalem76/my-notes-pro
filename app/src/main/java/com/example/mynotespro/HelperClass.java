@@ -35,7 +35,7 @@ public class HelperClass {
     public void setPassword(String password) {
         this.password = password;
     }
-    public HelperClass(String name, String email, String employe, String password) {
+    public HelperClass(String name, String email, String password,String mobile) {
         this.name = name;
         this.email = email;
         this.password = password;

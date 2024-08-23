@@ -43,7 +43,7 @@ public class SignUppage extends AppCompatActivity {
         editText_name=(EditText) findViewById(R.id.signup_name);
         editText_email=(EditText) findViewById(R.id.signup_email);
         editText_mobile=(EditText) findViewById(R.id.signup_mobile);
-        editText_password=(EditText) findViewById(R.id.signup_password);
+        editText_password=(EditText) findViewById(R.id.password);
         progressBar= (ProgressBar) findViewById(R.id.progressbar);
 
         button_signup=(Button) findViewById(R.id.signup_button);

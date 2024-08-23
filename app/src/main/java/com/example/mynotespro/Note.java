@@ -1,11 +1,14 @@
 package com.example.mynotespro;
 
-import java.sql.Timestamp;
+import com.google.firebase.Timestamp;
 
 public class Note {
     String title;
     String content;
     Timestamp timestamp;
+
+    public Note() {
+    }
 
     public String getTitle() {
         return title;
@@ -29,12 +32,5 @@ public class Note {
 
     public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
-    }
-
-    public Note() {
-
-    }
-
-    public void setTimestamp(com.google.firebase.Timestamp now) {
     }
 }
