@@ -46,8 +46,10 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("com.airbnb.android:lottie:5.2.0")
-    implementation ("com.google.firebase:firebase-firestore:24.0.0")
     implementation ("com.firebaseui:firebase-ui-firestore:8.0.2")
+    implementation ("com.google.firebase:firebase-auth:21.1.0")
+    implementation ("com.google.firebase:firebase-firestore:24.4.1")
+
 
 
 }
