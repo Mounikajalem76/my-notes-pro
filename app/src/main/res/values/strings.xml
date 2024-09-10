@@ -21,4 +21,7 @@
     <string name="password">Password</string>
     <string name="signin">SignIn</string>
     <string name="set_reminder_time">Set Reminder Time</string>
+    <string name="set_time">Set Time</string>
+    <string name="set_reminder_time_n">Set Reminder Time \n</string>
+    <string name="forgetpassword">ForgetPassword</string>
 </resources>

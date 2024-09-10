@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#208897"
+    android:background="#61DA66"
     tools:context=".NoteDetails">
 
 
@@ -76,13 +76,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="bottom"
-        android:layout_marginTop="650dp"
+        android:layout_marginTop="630dp"
         android:orientation="vertical">
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/reminder_time_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/set_reminder_time"
+        android:text="@string/set_reminder_time_n"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="16sp"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"/>
@@ -92,7 +94,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Set Time"/>
+        app:cornerRadius="2dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        android:hint="@string/set_time"/>
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"

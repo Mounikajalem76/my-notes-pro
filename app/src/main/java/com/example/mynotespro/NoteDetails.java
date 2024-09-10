@@ -94,7 +94,6 @@ public class NoteDetails extends AppCompatActivity {
         }
     }
 
-
     @SuppressLint("SetTextI18n")
     private void openTimePickerDialog() {
         MaterialTimePicker picker = new MaterialTimePicker.Builder()
@@ -179,7 +178,6 @@ public class NoteDetails extends AppCompatActivity {
         alarmManager.setExact(AlarmManager.RTC_WAKEUP, reminderTime.toDate().getTime(), pendingIntent);
     }
 
-
     void deleteNoteFromFireBase() {
         DocumentReference documentReference = Utility.getCollectionReferenceForNotes().document(docId);
         documentReference.delete().addOnCompleteListener(task -> {
@@ -200,6 +198,7 @@ public class NoteDetails extends AppCompatActivity {
             }
         }
     }
+
 
 
     @Override

@@ -12,25 +12,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="70dp"
         android:fontFamily="cursive"
         android:text="SignIn"
         android:textColor="@color/white"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="30dp"
         android:layout_marginTop="220dp"
+        android:gravity="center"
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:gravity="center"
             app:boxCornerRadiusBottomEnd="30dp"
@@ -38,11 +39,11 @@
 
             <EditText
                 android:id="@+id/signin_email"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="#245E8C"
-                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawableStart="@drawable/baseline_email_24"
                 android:drawablePadding="10dp"
                 android:fontFamily="cursive"
                 android:hint="Email"
@@ -72,17 +73,16 @@
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <Button
             android:id="@+id/signup_button"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#208897"
+            android:backgroundTint="#61DA66"
             android:fontFamily="cursive"
             android:text="@string/signin"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <ProgressBar
@@ -99,9 +99,9 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:fontFamily="cursive"
-            android:text="ForgetPassword"
-            android:textColor="#208997"
-            android:textSize="18dp"
+            android:text="@string/forgetpassword"
+            android:textColor="#61DA66"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -127,9 +127,11 @@
                 android:layout_marginLeft="5dp"
                 android:fontFamily="cursive"
                 android:text="SignUp"
-                android:textColor="#208997 "
+                android:textColor="#61DA66 "
                 android:textSize="20dp"
                 android:textStyle="bold" />
         </LinearLayout>
+
     </LinearLayout>
+
 </LinearLayout>

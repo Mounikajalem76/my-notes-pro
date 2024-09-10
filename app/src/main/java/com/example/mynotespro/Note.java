@@ -6,6 +6,7 @@ public class Note {
     String title;
     String content;
     Timestamp timestamp;
+    Timestamp reminderTime;
 
     public Timestamp getReminderTime() {
         return reminderTime;
@@ -14,8 +15,6 @@ public class Note {
     public void setReminderTime(Timestamp reminderTime) {
         this.reminderTime = reminderTime;
     }
-
-    Timestamp reminderTime;
 
     public Note() {
     }
