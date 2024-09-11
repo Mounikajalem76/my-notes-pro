@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="150dp"
         android:text="@string/my_notes_pro"
-        android:textColor="#61DA66"
+        android:textColor="#299AA8"
         android:textSize="50sp"
        android:fontFamily="cursive"
         android:textStyle="bold"/>

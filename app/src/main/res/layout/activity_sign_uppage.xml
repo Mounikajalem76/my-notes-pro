@@ -124,7 +124,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#61DA66"
+            android:backgroundTint="#299AA8"
             android:fontFamily="cursive"
             android:text="SignUp"
             android:textSize="20dp"
@@ -159,7 +159,7 @@
                 android:layout_marginLeft="5dp"
                 android:fontFamily="cursive"
                 android:text="SignIn"
-                android:textColor="#61DA66"
+                android:textColor="#299AA8"
                 android:textSize="20dp"
                 android:textStyle="bold" />
         </LinearLayout>

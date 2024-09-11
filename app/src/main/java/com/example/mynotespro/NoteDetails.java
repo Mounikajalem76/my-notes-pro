@@ -84,7 +84,6 @@ public class NoteDetails extends AppCompatActivity {
     }
 
     private void checkExactAlarmPermission() {
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
             if (alarmManager != null && !alarmManager.canScheduleExactAlarms()) {
@@ -92,6 +91,7 @@ public class NoteDetails extends AppCompatActivity {
                 startActivity(intent);
             }
         }
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -129,7 +129,7 @@ public class NoteDetails extends AppCompatActivity {
         }
     }
 
-    void saveNote() {
+        void saveNote() {
         String noteTitle = titleEditText.getText().toString();
         String noteContent = contentEditText.getText().toString();
 
@@ -198,7 +198,6 @@ public class NoteDetails extends AppCompatActivity {
             }
         }
     }
-
 
 
     @Override

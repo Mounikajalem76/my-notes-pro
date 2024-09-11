@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#61DA66"
+            android:backgroundTint="#299AA8"
             android:fontFamily="cursive"
             android:text="@string/signin"
             android:textSize="20sp"
@@ -100,7 +100,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="cursive"
             android:text="@string/forgetpassword"
-            android:textColor="#61DA66"
+            android:textColor="#299AA8"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -127,7 +127,7 @@
                 android:layout_marginLeft="5dp"
                 android:fontFamily="cursive"
                 android:text="SignUp"
-                android:textColor="#61DA66 "
+                android:textColor="#299AA8 "
                 android:textSize="20dp"
                 android:textStyle="bold" />
         </LinearLayout>
